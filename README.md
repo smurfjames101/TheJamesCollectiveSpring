@@ -1,4 +1,4 @@
-# TheJamesCollectiveSprint
+# TheJamesCollectiveSpring
   ## Links
   ### Trello
   - https://trello.com/b/qhKhCpJA/spring-work
