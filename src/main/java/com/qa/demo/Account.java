@@ -1,6 +1,5 @@
 package com.qa.demo;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
@@ -10,9 +9,6 @@ public class Account {
 	private String firstName;
 	private String secondName;
 	private String accountNum;
-	
-	@Autowired
-	private INumGen numGen;
 	
 	public Account(String firstName, String secondName, String accountNum) {
 		this.firstName = firstName;
