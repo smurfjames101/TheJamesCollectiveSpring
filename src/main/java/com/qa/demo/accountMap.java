@@ -2,6 +2,7 @@ package com.qa.demo;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Spliterator;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
@@ -20,8 +21,15 @@ public class AccountMap {
 	public void addAccount(Account account) {
 		map.put(numGen.genNum(), account);
 	}
+
 	@Override
 	public String toString() {
-		return this.map.toString();
+		String outString = "";
+		String[] list = new String[map.size()];
+		map.keySet().toArray(list);
+		for (int i = 0; i < map.size(); i++) {
+			outString += "Account " + (i + 1) + ": " + list[i] + "\n";
+		}
+		return outString;
 	}
 }
