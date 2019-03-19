@@ -11,13 +11,13 @@ public class TjcAccountsApplication {
 		ApplicationContext ac = SpringApplication.run(TjcAccountsApplication.class, args);
 		AccountMap am = (AccountMap) ac.getBean("accountMap");
 		INumGen numGen =(INumGen)ac.getBean("genNum");
-		AccountBuilder accBuild = (AccountBuilder) ac.getBean("accountBuilder");
+		AccountBuilder accBuild = ((AccountBuilder) ac.getBean("accountBuilder")).getBuilder();
 		
-		am.addAccount(accBuild.getBuilder().accountNum(numGen.genNum()).accountBuild());
-		am.addAccount(accBuild.getBuilder().accountNum(numGen.genNum()).accountBuild());
-		am.addAccount(accBuild.getBuilder().accountNum(numGen.genNum()).accountBuild());
-		am.addAccount(accBuild.getBuilder().accountNum(numGen.genNum()).accountBuild());
-		am.addAccount(accBuild.getBuilder().accountNum(numGen.genNum()).accountBuild());
+		am.addAccount(accBuild.accountNum(numGen.genNum()).accountBuild());
+		am.addAccount(accBuild.accountNum(numGen.genNum()).accountBuild());
+		am.addAccount(accBuild.accountNum(numGen.genNum()).accountBuild());
+		am.addAccount(accBuild.accountNum(numGen.genNum()).accountBuild());
+		am.addAccount(accBuild.accountNum(numGen.genNum()).accountBuild());
 		System.out.println(am);
 
 	}
