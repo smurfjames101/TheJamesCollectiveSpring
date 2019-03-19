@@ -25,9 +25,4 @@ public class AccountNumberGenerator {
 		}
 		return accountString;
 	}
-	
-	public int getAccountNum() {
-		return this.accountNum;
-	}
-
 }
