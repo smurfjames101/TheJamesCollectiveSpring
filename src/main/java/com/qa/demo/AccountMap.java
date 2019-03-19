@@ -13,13 +13,10 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class AccountMap {
-	@Autowired
-	private INumGen numGen;
-
 	public Map<String, Account> map = new HashMap<String, Account>();
 
 	public void addAccount(Account account) {
-		map.put(numGen.genNum(), account);
+		map.put(account.getAccountNum(), account);
 	}
 
 	@Override

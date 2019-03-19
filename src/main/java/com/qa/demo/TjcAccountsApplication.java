@@ -10,11 +10,14 @@ public class TjcAccountsApplication {
 	public static void main(String[] args) {
 		ApplicationContext ac = SpringApplication.run(TjcAccountsApplication.class, args);
 		AccountMap am = (AccountMap) ac.getBean("accountMap");
-		am.addAccount(new Account());
-		am.addAccount(new Account());
-		am.addAccount(new Account());
-		am.addAccount(new Account());
-		am.addAccount(new Account());
+		INumGen numGen =(INumGen)ac.getBean("genNum");
+		AccountBuilder accBuild = (AccountBuilder) ac.getBean("accountBuilder");
+		
+		am.addAccount(accBuild.getBuilder().accountNum(numGen.genNum()).accountBuild());
+		am.addAccount(accBuild.getBuilder().accountNum(numGen.genNum()).accountBuild());
+		am.addAccount(accBuild.getBuilder().accountNum(numGen.genNum()).accountBuild());
+		am.addAccount(accBuild.getBuilder().accountNum(numGen.genNum()).accountBuild());
+		am.addAccount(accBuild.getBuilder().accountNum(numGen.genNum()).accountBuild());
 		System.out.println(am);
 
 	}
