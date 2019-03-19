@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.qa.demo;
 
 import java.util.concurrent.ThreadLocalRandom;
 import org.springframework.stereotype.Component;
