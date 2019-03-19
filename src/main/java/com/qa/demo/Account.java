@@ -9,15 +9,15 @@ public class Account {
 	private String firstName;
 	private String secondName;
 	private String accountNum;
+	private INumGen numGen;
 	
 	public Account(String firstName, String secondName, String accountNum) {
 		this.firstName = firstName;
 		this.secondName = secondName;
-		this.accountNum = accountNum;
+		this.accountNum = numGen.genNum();
 	}
 	
-	public Account(String accountNum) {
-		this.accountNum = accountNum;
+	public Account() {
 	}
 
 	public String getFirstName() {
@@ -43,6 +43,4 @@ public class Account {
 	public void setAccountNum(String accountNum) {
 		this.accountNum = accountNum;
 	}
-	
-	
 }
