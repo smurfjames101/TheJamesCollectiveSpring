@@ -9,10 +9,9 @@ public class TjcAccountsApplication {
 
 	public static void main(String[] args) {
 		ApplicationContext ac = SpringApplication.run(TjcAccountsApplication.class, args);
-		System.out.println(((AccountNumberGeneratorFInal) ac.getBean("accountNumberGenerator")).genAccountNum(8));
-		//TODO Add Correct Hash map bean name
-		//System.out.println(ac.getBean("HashMap"));
-		
+		AccountMap am = (AccountMap) ac.getBean("accountMap");
+		am.addAccount(new Account());
+		System.out.println(am);
 	}
 
 }
