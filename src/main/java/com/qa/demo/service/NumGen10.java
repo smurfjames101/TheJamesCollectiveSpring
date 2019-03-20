@@ -1,11 +1,10 @@
-package com.qa.demo;
+package com.qa.demo.service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
-public class NumGen8 implements INumGen {
+public class NumGen10 implements INumGen {
 	private List<String> accountNums = new ArrayList<String>();
 
 	public String addChar() {
@@ -32,13 +31,12 @@ public class NumGen8 implements INumGen {
 		Boolean newCheck = true;
 		while (newCheck) {
 			accountString = addChar();
-
-			Random rand = new Random();
-			int randNum = rand.nextInt(90000000) + 10000000;
-			accountString += "" + randNum;
+			for (int i = 0; i < 10; i++) {
+				String digit = String.valueOf(ThreadLocalRandom.current().nextInt(0, 10));
+				accountString += digit;
+			}
 			newCheck = accountNums.contains(accountString);
 		}
 		return accountString;
 	}
-
 }

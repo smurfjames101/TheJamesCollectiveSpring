@@ -1,9 +1,10 @@
 package com.qa.demo;
 
 import java.util.Optional;
-
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
+
+import com.qa.demo.entities.Account;
 
 @Component
 @Scope("singleton")

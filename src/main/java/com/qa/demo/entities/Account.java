@@ -6,27 +6,51 @@ import javax.persistence.Id;
 
 @Entity
 public class Account {
+	private String firstName;
+	private String secondName;
+
 	@Id
 	@GeneratedValue
 	private long id;
-	
-	private String accountNumber;
 
-	public long getId() {
-		return id;
+	private String accountNum;
+
+	public Account() {
+
 	}
 
-	public void setId(long id) {
-		this.id = id;
+	public Account(String firstName, String secondName, String accountNum) {
+		this.firstName = firstName;
+		this.secondName = secondName;
+		this.accountNum = accountNum;
 	}
 
-	public String getAccountNumber() {
-		return accountNumber;
+	public Account(String accountNum) {
+		this.accountNum = accountNum;
 	}
 
-	public void setAccountNumber(String accountNumber) {
-		this.accountNumber = accountNumber;
+	public String getFirstName() {
+		return firstName;
 	}
-	
-	
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getSecondName() {
+		return secondName;
+	}
+
+	public void setSecondName(String secondName) {
+		this.secondName = secondName;
+	}
+
+	public String getAccountNum() {
+		return accountNum;
+	}
+
+	public void setAccountNum(String accountNum) {
+		this.accountNum = accountNum;
+	}
+
 }

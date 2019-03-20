@@ -13,15 +13,7 @@ import com.qa.demo.entities.Account;
 public class TjcAccountsApplication {
 
 	public static void main(String[] args) {
-		ApplicationContext ac = SpringApplication.run(TjcAccountsApplication.class, args);
-		AccountMap am = (AccountMap) ac.getBean("accountMap");
-		
-		am.addAccount(new Account());
-		am.addAccount(new Account());
-		am.addAccount(new Account());
-		am.addAccount(new Account());
-		am.addAccount(new Account());
-		System.out.println(am);
+		 SpringApplication.run(TjcAccountsApplication.class, args);
 	}
 
 }
