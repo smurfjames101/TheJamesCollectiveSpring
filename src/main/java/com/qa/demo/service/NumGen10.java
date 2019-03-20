@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
+
 public class NumGen10 implements INumGen {
 	private List<String> accountNums = new ArrayList<String>();
 

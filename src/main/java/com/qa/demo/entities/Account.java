@@ -8,25 +8,23 @@ import javax.persistence.Id;
 public class Account {
 	private String firstName;
 	private String secondName;
+	private String accountNum;
 
 	@Id
 	@GeneratedValue
 	private long id;
 
-	private String accountNum;
-
 	public Account() {
-
 	}
 
-	public Account(String firstName, String secondName, String accountNum) {
+	public Account(String firstName, String secondName) {
 		this.firstName = firstName;
 		this.secondName = secondName;
-		this.accountNum = accountNum;
+		// this.accountNum = numGen.genNum();
 	}
 
-	public Account(String accountNum) {
-		this.accountNum = accountNum;
+	public long getID() {
+		return this.id;
 	}
 
 	public String getFirstName() {
